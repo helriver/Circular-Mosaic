@@ -1,12 +1,10 @@
-PImage img; // Declare a variable of type PImage
+PImage img; 
 
 void setup() {
   
   size(1080,1620);
-  // Make a new instance of a PImage by loading an image file
   img = loadImage("dia.jpg");
   background(255);
-  // Draw the image to the screen at coordinate (0,0)
   // tint(100,100);
   // image(img,0,0);
   
@@ -33,19 +31,16 @@ void setup() {
   
   frameRate(1000);
 
-  // Pick a random point
   int x = int(random(img.width));
   int y = int(random(img.height));
   int loc = x + y*img.width;
 
-  // Look up the RGB color in the source image
   loadPixels();
   float r = red(img.pixels[loc]);
   float g = green(img.pixels[loc]);
   float b = blue(img.pixels[loc]);
   noStroke();
 
-  // Draw an ellipse at that location with that color
   fill(r,g,b);
   int m=int(random(15))*2;
   //ellipse(x,y,20,20);
@@ -53,11 +48,6 @@ void setup() {
 }
 */
 
-void draw(){
-
-  
-
-}
 
 void mousePressed() {
   
